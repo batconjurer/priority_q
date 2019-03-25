@@ -2,7 +2,7 @@
 # cython: language_level=3, boundscheck=False, wraparound=False
 
 from libcpp.queue cimport priority_queue
-from libcpp.pair cimport pair
+
 
 ctypedef unsigned long ulong
 ctypedef unsigned int uint
