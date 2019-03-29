@@ -73,6 +73,7 @@
     //
     "matrix": {
          "cython": ["0.29.6"],
+         "numpy": ["1.16.2"],
     //     "six": ["", null],        // test with and without six installed
     //     "pip+emcee": [""],   // emcee is only available for install with pip.
     },

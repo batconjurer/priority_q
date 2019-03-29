@@ -2,17 +2,19 @@
 #define PQ
 #include <ostream>
 
+//typedef unsigned long long ulong;
+
 class  CostIndex{
 public:
 	float cost;
-	unsigned long address;
+	unsigned long long address;
 
 	CostIndex(){
 		cost = 0;
 		address = 0;
 	}
 
-	CostIndex(float cost, unsigned long address) : cost(cost), address(address){};
+	CostIndex(float cost, unsigned long long address) : cost(cost), address(address){};
 	
 	bool operator<(const CostIndex &rhs) const{
 		return (cost > rhs.cost);

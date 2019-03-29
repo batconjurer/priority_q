@@ -4,7 +4,7 @@
 from libcpp.queue cimport priority_queue
 
 
-ctypedef unsigned long ulong
+ctypedef unsigned long long ulong
 ctypedef unsigned int uint
 
 cdef extern from "pq.h" nogil:
