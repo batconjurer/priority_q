@@ -13,6 +13,7 @@ class TimePQ:
         self.heap = []
         self.pqueue = priority_queue.PyPQ()
         self.rand_list = list(nprand.permutation(1000))
+        self.big_rand_list = list(nprand.permutation(100000))
 
     def time_heapq(self):
         for item in self.rand_list:
@@ -20,10 +21,21 @@ class TimePQ:
         for _ in range(1000):
             heapq.heappop(self.heap)
 
-    def time_push_priority_q(self):
+    def time_priority_q(self):
         for item in self.rand_list:
             self.pqueue.insert((item, item))
         for _ in range(1000):
             self.pqueue.pop()
 
+    def peakmem_heapq(self):
+        for item in self.big_rand_list:
+            heapq.heappush(self.heap, (item, item))
+        for _ in range(100000):
+            heapq.heappop(self.heap)
+
+    def peakmem_priority_q(self):
+        for item in self.big_rand_list:
+            self.pqueue.insert((item, item))
+        for _ in range(100000):
+            self.pqueue.pop()
 
